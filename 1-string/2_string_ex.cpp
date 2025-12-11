@@ -3,62 +3,50 @@
 
 using namespace std;
 
-/*
-    size() e length()
-    TODO: stampa la lunghezza della string passata in input
-*/
 void lunghezzaStringa(string stringa){
-
-    cout << "Da implementare" << endl;
-
+    // .size()
+    int x = stringa.size();
+    cout << "La lunghezza della stringa e': " << x << endl;
+    cout << endl;
+    // .length()
+    int y = stringa.length();
+    cout << "La lunghezza della stringa e': " << y << endl;
+    cout << endl;
 }
 
-/*
-    find()
-    TODO: immettere una stringa da tastiera e comunicare all'utente se è presente la parola "ciao"
-            se la parola è presente, stampare "La parola ciao è presente"
-            altrimenti stampare "La parola ciao NON è presente"
-*/
+
 void trovaCiao(string stringa){
+    // .find()
+    if (int z = stringa.find("ciao"))
+    { cout << "La parola ciao NON e' presente" << endl; }
+    else {cout << "La parola ciao e' presente" << endl;}
 
-    cout << "Da implementare" << endl;
-    
+}
+
+void sostituisciPizzaConPasta(string stringa) {
+
+    string str1 = "pizza";
+    cout << "Stringa prima di replace: " << str1 << endl;
+
+    str1.replace(0, str1.length(), "pasta");
+    cout << "Stringa dopo replace: " << str1 << endl;
+    cout << endl;
 }
 
 
-/*
-    replace()
-    TODO: sostituire la parola "pizza" con la parola "pasta" e stampare la nuova stringa
-*/
-void sostituisciPizzaConPasta(string stringa){
-    
-    cout << "Da implementare" << endl;
-    
-}
-
-
-/*
-    substr()
-    TODO: estrarre e stampare la prima parola della stringa passata in input
-
-    HINT: la prima parola termina al primo spazio (trovabile con find())
-*/
 void stampaPrimaParola(string stringa){
-    // TODO
+    // .find()
+    int s = stringa.find(" ");
+    // .substr()
+    stringa = stringa.substr(0, s);
+    cout << "Prima parola stringa: " << stringa << endl;
+    }
 
-    cout << "Da implementare" << endl;
-    
-}
-
-
-/*
-    insert()
-    TODO: inserire alla fine della stringa passata in input " Giovanni!" e stampare la nuova stringa
-*/
 void aggiungiGiovanni(string frase){
-
-    cout << "Da implementare" << endl;
-    
+    // .insert()
+    int x = frase.size();
+    frase.insert(x, " Giovanni!");
+    cout << "La nuova frase e': " << frase << endl;
 }
 
 int main()
@@ -71,11 +59,11 @@ int main()
 
 
     lunghezzaStringa(str);
-    //trovaCiao(str);
-    //sostituisciPizzaConPasta(str);
-    //stampaPrimaParola(str);
-    //aggiungiGiovanni(str);
-    
+    trovaCiao(str);
+    sostituisciPizzaConPasta(str);
+    stampaPrimaParola(str);
+    aggiungiGiovanni(str);
+
 
 
     return 0;
