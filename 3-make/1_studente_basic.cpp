@@ -19,13 +19,21 @@ public:
 
 int main()
 {
-    /*********************** Creazione di oggetti ******************************/
-    // TODO Creare un nuovo studente "Mario" con eta 17 e media 7
-    // TODO Creare un nuovo studente "Maria"  (questa volta con un puntatore) con eta 18 e media 8
+    Studente Mario;
+    Studente Maria;
 
+    Studente *P;
+    P=&Maria;
+    P -> eta= 18;
+    P -> media = 8;
+    P -> nome= "Maria";
 
-    /************************** Visualizzazione ********************************/
-    // TODO Visualizzare il nome e la media sia di Mario che Maria
-
+    Mario.nome= "Mario";
+    Mario.eta=17;
+    Mario.media=7;
+    
+    Mario.stampaStudente();
+    P-> stampaStudente();
+    
     return 0;
 }
