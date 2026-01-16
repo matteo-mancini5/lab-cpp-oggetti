@@ -1,7 +1,7 @@
 #include <iostream>
-#include <string>
 
 using namespace std;
+
  /********************************************************************************************
  *                                  Implementazione classe Rettangolo                        *     
  *                                                                                           *
@@ -12,20 +12,65 @@ using namespace std;
  *                                                                                           *
  *********************************************************************************************/
 
+
 class Rettangolo {
 
-    // Campi
+private:
+    float lato1;
+    float lato2;
 
-    // Costruttore
+public:
+    
+    Rettangolo() {
+        lato1 = 0;
+        lato2 = 0;
+    }
 
-    // Metodi set... e get...
+   
+    void setLato1(float l1) {
+        if (l1 > 0)
+            lato1 = l1;
+    }
 
-    // Altri metodi
+    void setLato2(float l2) {
+        if (l2 > 0)
+            lato2 = l2;
+    }
+
+   
+    float getLato1() {
+        return lato1;
+    }
+
+    float getLato2() {
+        return lato2;
+    }
+
+    float getPerimetro() {
+        return 2 * (lato1 + lato2);
+    }
+
+    float getArea() {
+        return lato1 * lato2;
+    }
+
+    
+    void stampaRettangolo() {
+        cout << "Lato 1: " << lato1 << endl;
+        cout << "Lato 2: " << lato2 << endl;
+        cout << "Perimetro: " << getPerimetro() << endl;
+        cout << "Area: " << getArea() << endl;
+    }
 };
 
-int main()
-{
-    // TODO testare
+int main() {
+
+    Rettangolo r;
+
+    r.setLato1(3);
+    r.setLato2(5);
+
+    r.stampaRettangolo();
 
     return 0;
 }
