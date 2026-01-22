@@ -1,0 +1,57 @@
+#include <iostream>
+
+using namespace std;
+
+class Portafoglio {
+public:
+    float valore;
+
+
+    Portafoglio() {
+        valore = 3.00;
+    }
+
+
+    Portafoglio(float a) {
+        valore = a;
+    }
+
+
+    void stampa() {
+        cout << valore << endl;
+    }
+
+     float aggiorna (float valore1, char se){
+    if (se == '+') {
+        valore = valore + valore1; }
+        else {
+                valore=  valore - valore1;
+        }
+    }
+
+};
+
+int main() {
+
+    Portafoglio x;
+    x.stampa();
+
+
+    Portafoglio y(500);
+    y.stampa();
+
+    float valore1;
+    char se;
+    cout << "voui sommare o sottrarre (+/-):" << endl;
+    cin >> se;
+    cout << "di quanto vuoi sommare o sottrarre: " << endl;
+    cin >> valore1;
+
+    y.aggiorna(valore1, se);
+    y.stampa();
+
+
+
+    return 0;
+}
+
